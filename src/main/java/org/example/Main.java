@@ -1,12 +1,19 @@
 package org.example;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+import java.util.Calendar;
+
 public class Main {
     public static void main(String[] args) {
-////        FibSeries.printSeries();
-//        for (int i = 0; i <10; i++) {
-//            System.out.println("this is hot fix");
-//        }
+//        FibSeries f = new FibSeries();
+//        f.printSeries();
+
+        Employee permanentEmp = new PermanentEmp(101,"anil",10000,1500,3);
+        Employee contractEmp = new ContractEmp(102,"ankit",500,10);
+
+        permanentEmp.calculateSalary();
+        contractEmp.calculateSalary();
+
+        System.out.println("permanentEmp : "+permanentEmp.getSalary());
+        System.out.println("contractEmp : "+contractEmp.getSalary());
     }
 }
